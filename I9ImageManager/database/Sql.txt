@@ -1,0 +1,6 @@
+--delete from pro_produto;
+--delete from set_setor;
+--delete from sug_subgrupo;
+--delete from gru_grupo;
+--delete from ses_sessao;
+

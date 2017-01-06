@@ -1,0 +1,49 @@
+<script>
+    //var x = window.screenX;
+    //var y = window.screenY;
+
+    //window.open('principal.html','principal', 'left=0,top=0,width='+x +',height=' +y + ',location=0,directories=0,scrollbars=0,status=0,toolbar=0,resizable=0');
+</script>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <script type="text/javascript" src="js/jsDraw2D/jsDraw2D.js"></script>
+        <!--script type="text/javascript" src="js/jsDraw2D/jsDraw2D_Uncompressed.js"></script-->
+    </head>
+    <body leftmargin="0" topmargin="0"  style="margin-top: 0px; margin-left: 0px; margin-right: 0px;margin-bottom: 0px">
+
+        <div id="header">
+        </div>
+        <!-- gwt -->
+        <div id="gwt"></div>
+
+        <div id="banner1" style="z-index: -10" align="center">
+        </div>
+        <script>
+            //Create jsGraphics object
+            var gr = new jsGraphics(document.getElementById("canvas"));
+
+            //Create jsColor object
+            var col = new jsColor("red");
+
+            //Create jsPen object
+            var pen = new jsPen(col,1);
+
+            //Draw a Line between 2 points
+            var pt1 = new jsPoint(20,30);
+            var pt2 = new jsPoint(120,230);
+            gr.drawLine(pen,pt1,pt2);
+
+            //Draw filled circle with pt1 as center point and radius 30.
+            gr.fillCircle(col,pt1,30);
+
+            //You can also code with inline object instantiation like below
+            gr.drawLine(pen,new jsPoint(40,10),new jsPoint(70,150));
+
+        </script>
+        <div id="canvas" style="overflow:hidden;position:relative;width:600px;height:300px;"></div>
+        <!-- footer -->
+        <!--div id="footer"><img src="images/i9im.gif" alt="i9ti"></div-->
+    </body>
+</html>
+
